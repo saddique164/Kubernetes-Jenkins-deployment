@@ -1,9 +1,9 @@
 # Kubernetes-Jenkins-deployment
-# This document is for personal use. If you can get the benefit, it is good for you.
+This document is for personal use. If you can get the benefit, it is good for you.
 
-# Every single time you create a kubernetes project, create three files: namespace.yaml, deployment.yaml and service.yaml
+create three files: namespace.yaml, deployment.yaml and service.yaml
 
-# In the namespace.yaml file:
+# namespace.yaml file:
 1.    you need to create a unique namespace, which wil be used in deployment and service yaml files. Lke this.
   
 ---
