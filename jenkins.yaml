@@ -1,0 +1,27 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: jenkins
+  namespace: jenkins-deployment
+  labels:
+    app: jenkins-image
+  annotations:
+     monitoring: "true"
+spec:
+  selector:
+    matchLabels:
+      app: jenkins-image
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: jenkins-image
+    spec:
+       containers:
+        - image: jenkins:latest
+          name:  jenkins
+          ports:
+          - containerPort: 80
+          resources:
+      
