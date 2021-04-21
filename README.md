@@ -83,13 +83,13 @@ spec:
        app: jenkins
     type: NodePort 
   
-1. Api is chosen from the aformentioned link. for writing serbice
+1. Api is chosen from the aformentioned link.
 2. Here namespace is same as mentioned in namespace scripts
-3. in the Spec: portion. nodeport will be external accessible port. it will be replicated on port 80. Poryocol will be TCP and Continaer    inner port is 80 port, which is target port.
-4. I chose NodePort routing method as I have build my cluster on local VMs. In Cloud Loadbalancer is used for which you also buy a domain to point it out
+3. in the Spec: portion. nodeport will be external accessible port of the node. it will be replicated on the service port 80. Protocol will be TCP and service port is 80 that will route traffice to targetPort 80, which is pod port.
+4. I chose NodePort routing method as I have built my cluster on local VMs. In Cloud, Loadbalancer is used for which you also buy a domain to route to the outerworld.
 
 After deploying these files your jenkkins will be ready
 
-NOte : for Pods use Fasboard or switch your context to watch out the process. 
+Note : for Pods use Fasboard or switch your context to watch out the process. 
 
  
